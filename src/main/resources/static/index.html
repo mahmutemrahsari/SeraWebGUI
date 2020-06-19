@@ -5,39 +5,38 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Sera Web Interface v.2020</title>
+    <title>Greenhouse Web Interface v.2020</title>
     <script src="../index.js"></script>
 </head>
 <body>
 
     <div class="container">
         <div class="row">
-            <h1 style="text-align: center; color: blueviolet">Sera Web Inface 2020</h1>
+            <h1 style="text-align: center; color: blueviolet">Greenhouse Web Inface 2020</h1>
 
             <table class="table">
                 <tr>
                     <th>Humidity Level</th><th>Temperature Level</th><th>Water Level</th>
                 </tr>
-                <tr><th>Sensor ON</th><th>Sensor ON</th><th>Sensor ON</th></tr>
+                <tr><th id="senH">Sensor Status</th><th id="senT">Sensor Status</th><th id="senW">Sensor Status</th></tr>
                 <tr>
                     <th>
-                        <button class="btn btn-success" id="starth">Start</button>
-                        <button class="btn btn-danger" id="stoph"  >Stop</button>
-                        <button  class="btn btn-warning" id="reseth" >Reset</button>
+                        <button class="btn btn-success" id="starth" onclick="controlSensorOnH()">Start</button>
+                        <button class="btn btn-danger" id="stoph" onclick="controlSensorOffH()" >Stop</button>
                     </th>
                     <th>
-                        <button class="btn btn-success" id="startt">Start</button>
-                        <button class="btn btn-danger" id="stopt"  >Stop</button>
-                        <button  class="btn btn-warning" id="resett" >Reset</button>
+                        <button class="btn btn-success" id="startt" onclick="controlSensorOnT()">Start</button>
+                        <button class="btn btn-danger" id="stopt" onclick="controlSensorOffT()" >Stop</button>
                     </th>
                     <th>
-                        <button class="btn btn-success" id="startw">Start</button>
-                        <button class="btn btn-danger" id="stopw"  >Stop</button>
-                        <button  class="btn btn-warning" id="resetw" >Reset</button>
+                        <button class="btn btn-success" id="startw" onclick="controlSensorOnW()">Start</button>
+                        <button class="btn btn-danger" id="stopw" onclick="controlSensorOffW()" >Stop</button>
                     </th>
                 </tr>
 
             </table>
+
+            <div id="test"></div>
         </div>
     </div>
 </body>
